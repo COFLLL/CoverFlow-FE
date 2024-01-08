@@ -7,7 +7,7 @@ function Header() {
       <a href="/" className="header-logo">
         COVERFLOW
       </a>
-      <button className="login-btn">로그인ㅤ|ㅤ가입</button>
+      <button className="login-btn">로그인 / 가입</button>
     </header>
   );
 }

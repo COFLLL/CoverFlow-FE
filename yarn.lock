@@ -5016,6 +5016,13 @@ eslint-plugin-react@^7.27.1, eslint-plugin-react@^7.33.2:
     semver "^6.3.1"
     string.prototype.matchall "^4.0.8"
 
+eslint-plugin-styled-components@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-styled-components/-/eslint-plugin-styled-components-0.0.0.tgz#0c8988c83c182762f19d5fcffee0a442e5d2fc0f"
+  integrity sha512-dd+Sac1jwR8ceRb32Dz+W54KbZdXiDt+rjskuDHpPu2gMGIV6H6tGO/uhCynQYt16xw5QRKugC7y+UZauuG37g==
+  dependencies:
+    requireindex "~1.1.0"
+
 eslint-plugin-testing-library@^5.0.1:
   version "5.11.1"
   resolved "https://registry.npmjs.org/eslint-plugin-testing-library/-/eslint-plugin-testing-library-5.11.1.tgz"
@@ -8849,7 +8856,7 @@ prompts@^2.0.1, prompts@^2.4.2:
 
 prop-types@^15.8.1:
   version "15.8.1"
-  resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
   dependencies:
     loose-envify "^1.4.0"
@@ -9251,6 +9258,11 @@ require-from-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz"
   integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
+
+requireindex@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.1.0.tgz#e5404b81557ef75db6e49c5a72004893fe03e162"
+  integrity sha512-LBnkqsDE7BZKvqylbmn7lTIVdpx4K/QCduRATpO5R+wtPmky/a8pN1bO2D6wXppn1497AJF9mNjqAXr6bdl9jg==
 
 requires-port@^1.0.0:
   version "1.0.0"
@@ -10042,7 +10054,7 @@ style-loader@^3.3.1, style-loader@^3.3.3:
 
 styled-components@^6.1.6:
   version "6.1.6"
-  resolved "https://registry.npmjs.org/styled-components/-/styled-components-6.1.6.tgz"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-6.1.6.tgz#c75c4f994136545b3bcc11608db5363710b78c0e"
   integrity sha512-DgTLULSC29xpabJ24bbn1+hulU6vvGFQf4RPwBOJrm8WJFnN42yXpo5voBt3jDSJBa5tBd1L6PqswJjQ0wRKdg==
   dependencies:
     "@emotion/is-prop-valid" "1.2.1"

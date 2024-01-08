@@ -13,23 +13,22 @@
 }
 
 a.header-logo {
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -2px;
-  color: #000;
+  color: #ff8d1d;
   margin-left: 8%;
 }
 
 .login-btn {
-  margin-left: 36%;
+  margin-left: 38%;
   font-size: 0.9rem;
-  padding: 0.7% 2.6% 1% 2.3%; // 상 우 하 좌
+  padding: 0.9% 2.6% 0.9% 2.1%; // 상 우 하 좌
   border: 0.1px solid #ff8d1d;
   background-color: #ff8d1d;
   color: #fefefe;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
-  letter-spacing: -2px;
+  letter-spacing: -1.2px;
   font-weight: 400;
 }

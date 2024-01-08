@@ -19,9 +19,9 @@ module.exports = {
       },
     },
   ],
-  // parserOptions: {
-  //   ecmaVersion: 'latest',
-  // },
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
   plugins: ['react'],
   rules: {},
 };

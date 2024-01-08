@@ -1,0 +1,31 @@
+.main-page-container {
+  width: 420px;
+  margin-left: 36%;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  display: block;
+  background: linear-gradient(to bottom, #ffffff, #fff3e7);
+}
+
+.main-info {
+  text-align: center;
+  margin-top: 45%;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  color: #ff8d1d;
+  font-weight: 400;
+}
+
+.main-info-bold {
+  font-weight: 550;
+}
+
+.main-logo {
+  margin: 40% 0% -44% 24%;
+}
+
+.search-input-text {
+  letter-spacing: -1px;
+}
