@@ -142,58 +142,49 @@ function SearchResultPage() {
   const {
     state: { searchResults },
   } = useLocation() as SearchResultProps;
-  console.log('searchResults', searchResults);
   const [searchData, setSearchData] = useState<SearchDataProps[]>([]);
+  const [totalCompanyPages, setTotalCompanyPages] = useState(0);
   const companyList = searchResults?.map((result) => result);
   const companyName = companyList?.map((list) => list.companyName);
-  // const keyword = queryParams.get('keyword');
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
-
-  // const indexOfLastItem = currentPage * itemsPerPage;
-  // const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  // const currentItems = Array.from(searchResults)?.slice(
-  //   indexOfFirstItem,
-  //   indexOfLastItem,
-  // );
-
-  const totalPages = Math.ceil(searchResults.length / itemsPerPage);
 
   const handleGoBack = () => {
     navigate('/search-company');
   };
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchCompany = async (pageNo: number) => {
       if (!keyword) return;
       try {
         const response = await fetch(
-          `${BASE_URL}/api/company?pageNo=0&name=${keyword}`,
+          `${BASE_URL}/api/company?pageNo=${pageNo}&name=${keyword}`,
           {
             method: 'GET',
           },
         );
         const data = await response.json();
+        const totalPages = data.data.totalPages;
+
         setSearchData(data.data.companyList);
+        setTotalCompanyPages(totalPages);
         console.log('페이지 내 결과', data.data.companyList);
       } catch (error) {
         showErrorToast(`오류가 여기서발생: ${error}`);
         setSearchData([]);
       }
     };
-
-    fetchData();
-  }, [keyword]);
+    fetchCompany(currentPage);
+  }, [keyword, currentPage]);
 
   const goToResultDetailPage = (companyId: number) => {
     navigate(`/company-info/${companyId}`);
   };
 
-  const handlePagination = (type: PageProps) => {
-    if (type === 'prev' && currentPage > 0) {
+  const handlePagination = (type) => {
+    if (type === 'prev' && currentPage >= 1) {
       setCurrentPage(currentPage - 1);
-    } else if (type === 'next' && currentPage < totalPages - 1) {
+    } else if (type === 'next' && currentPage < totalCompanyPages) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -242,15 +233,13 @@ function SearchResultPage() {
                 </div>
               </span>
             )}
-          </ResultsList>
 
-          {totalPages > 1 && (
             <Pagination
-              totalPages={totalPages}
+              totalPages={totalCompanyPages}
               currentPage={currentPage}
               handlePagination={handlePagination}
             />
-          )}
+          </ResultsList>
         </ResultsContainer>
         <TabBar />
       </StyledHeader>
