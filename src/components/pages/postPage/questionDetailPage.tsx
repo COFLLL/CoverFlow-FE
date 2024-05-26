@@ -412,7 +412,6 @@ function QuestionDetailPage() {
               <li onClick={handleClickEdit} className="dropdown-item-edit">
                 수정
               </li>
-
               <li onClick={handleClickDelete} className="dropdown-item-delete">
                 삭제
               </li>
